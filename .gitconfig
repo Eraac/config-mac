@@ -1,0 +1,24 @@
+[push]
+    default = simple
+    followTags = true
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[user]
+    #name = Kevin <name>
+    #email = <email>
+[core]
+    excludesfile = /Users/kevin/.gitignore_global
+[alias]
+    ch = checkout
+    br = branch
+    co = commit -s
+    st = status
+[http]
+    postBuffer = 2M
+[pull]
+    rebase = false
+[commit]
+    gpgsign = true
+
