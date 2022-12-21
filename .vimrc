@@ -1,7 +1,9 @@
 syntax enable
+color monokai
+
+filetype plugin indent on
 set enc=utf-8
 set fileencoding=utf-8
-color monokai
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -9,15 +11,12 @@ set expandtab
 set number
 set showcmd
 set cursorline
-filetype plugin indent on
 set showmatch
 set ignorecase
 set smartcase
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set scrolloff=10
-nnoremap B ^
-nnoremap E $
 set foldmethod=indent
 set foldlevel=99
 set modeline
@@ -25,8 +24,10 @@ set modelines=5
 set wildmode=longest,list,full
 set wildmenu
 
+nnoremap B ^
+nnoremap E $
+
 let mapleader = ','
-execute pathogen#infect()
 
 " Ctrl+n open NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -46,6 +47,36 @@ map <Tab> <C-W>w
 set backspace=indent,eol,start
 
 "nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+" Vim-Plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'hashivim/vim-terraform'
+
+" auto close " ' ( { [
+Plug 'Raimondi/delimitMate'
+
+Plug 'preservim/nerdtree'
+
+" syntax for nginx file
+Plug 'chr4/nginx.vim'
+
+" auto align everything
+Plug 'godlygeek/tabular'
+
+" status bar
+Plug 'vim-airline/vim-airline'
+
+" better json in vim
+Plug 'elzr/vim-json'
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'ervandew/supertab'
+
+Plug 'terrastruct/d2-vim'
+
+call plug#end()
 
 " terraform
 let g:terraform_fmt_on_save=1
