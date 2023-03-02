@@ -1,11 +1,5 @@
 # My MacOS configuration
 
-## VIM
-
-```shell
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 ## HomeBrew
 
 ```shell
@@ -25,8 +19,16 @@ brew install kubectl
 brew install kubectx
 brew install pinentry-mac
 brew install helm
+brew install pre-commit
+brew install neovim
+brew install terraform-docs
+brew install niversal-ctags
+brew install tmux
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
+
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
 ```
 
