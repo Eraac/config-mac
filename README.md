@@ -32,3 +32,7 @@ brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 ```
 
+## tmux
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
